@@ -1,5 +1,6 @@
 
 import NavBar from "../components/Navbar"
+import Dashboard from "../components/Dashboard"
 import type { User, NavigationOption, UserOption } from '../types/Types'
 
 import user_df from '../assets/user_default.svg'
@@ -26,11 +27,11 @@ const userNavigation: UserOption[] = [
   { name: 'Sign out', href: '#' },
 ]
 
-export default function Dashboard() {
+export default function Main() {
   return (
       <div className="min-h-full">
         <NavBar navigationOps={navigation} userOps={userNavigation} user={user} logo={wd_logo} />
-        {/* <Dashboard /> */}
+        <Dashboard title="Dashboard" />
       </div>
   )
 }
