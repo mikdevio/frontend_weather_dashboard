@@ -5,6 +5,7 @@ import type { User, NavigationOption, UserOption } from '../types/Types'
 
 import user_df from '../assets/user_default.svg'
 import wd_logo from '../assets/wd_logo.svg'
+import SearchBox from "../components/SearchBox"
 
 
 const user: User = {
