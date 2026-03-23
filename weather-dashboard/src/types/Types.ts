@@ -6,12 +6,12 @@ export type User = {
 }
 
 export type UserOption = {
-    name: string;
-    href: string ;
+  name: string;
+  href: string;
 }
 
 export type NavigationOption = {
-  name: string, 
-  href: string, 
+  name: string,
+  href: string,
   current: boolean
 }
