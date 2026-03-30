@@ -16,6 +16,7 @@ const WeatherBox: React.FC<WeatherBoxProps> = ({ prop_1 }) => {
                 setLoading(true);
                 const data = await api.getCurrentWeather("Quito");
                 setWeather(data);
+                // console.log(data);
             } catch (error) {
                 setError("Cannot access to weather data");
             } finally {
@@ -34,12 +35,12 @@ const WeatherBox: React.FC<WeatherBoxProps> = ({ prop_1 }) => {
         <div className="bg-gray-900 py-24 sm:py-10 border-2 border-gray-600 mx-8 rounded-md">
             <div className="min-h-dvh">
                 {weather && (
-                    <div className="card">
-                        <h1>{weather.name}</h1>
-                        <p>Temperatura: {Math.round(weather.main.temp)}°C</p>
-                        <p>Humedad: {weather.main.humidity}%</p>
-                        <p>Sensación: {Math.round(weather.main.feels_like)}°C</p>
-                        <p>Viento: {weather.wind.speed} m/s</p>
+                    <div className="card text-center">
+                        <h1 className="text-3xl text-orange-400">{weather.name}</h1>
+                        <p className="text-2xl text-white">Temperatura: {Math.round(weather.main.temp)}°C</p>
+                        <p className="text-2xl text-white">Humedad: {weather.main.humidity}%</p>
+                        <p className="text-2xl text-white">Sensación: {Math.round(weather.main.feels_like)}°C</p>
+                        <p className="text-2xl text-white">Viento: {weather.wind.speed} m/s</p>
                     </div>
                 )}
             </div>
