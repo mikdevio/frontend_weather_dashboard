@@ -17,8 +17,10 @@ const Dashboard: React.FC<DashboardProps> = ({ title }) => {
                 </div>
             </header>
             <main>
-                <SearchBox prop_1="1" />
-                <WeatherBox prop_1="1" />
+                <div className="justify-items-center-safe">
+                    <SearchBox prop_1="1" />
+                    <WeatherBox prop_1="1" />
+                </div>
             </main>
         </>
     )

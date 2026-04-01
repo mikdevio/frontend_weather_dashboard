@@ -32,32 +32,31 @@ const WeatherBox: React.FC<WeatherBoxProps> = ({ prop_1 }) => {
 
     return (
 
-        <div className="bg-gray-900 py-24 sm:py-10 border-2 border-gray-600 mx-8 rounded-md">
-            <div className="min-h-dvh">
-                {weather && (
-                    <div className="card text-center">
-                        <h1 className="text-3xl text-orange-400">{weather.name}</h1>
-                        <p className="text-2xl text-white">Temperatura: {Math.round(weather.main.temp)}°C</p>
-                        <p className="text-2xl text-white">Humedad: {weather.main.humidity}%</p>
-                        <p className="text-2xl text-white">Sensación: {Math.round(weather.main.feels_like)}°C</p>
-                        <p className="text-2xl text-white">Viento: {weather.wind.speed} m/s</p>
-                    </div>
-                )}
-            </div>
-            <div className="mx-auto max-w-7xl px-6 lg:px-8">
-                <dl className="grid grid-cols-1 gap-x-8 gap-y-16 text-center lg:grid-cols-3">
-                    <div className="mx-auto flex max-w-xs flex-col gap-y-4">
-                        <dt className="text-base/7 text-gray-400">Transactions every 24 hours</dt>
-                        <dd className="order-first text-3xl font-semibold tracking-tight text-white sm:text-5xl">44 million</dd>
-                    </div>
-                    <div className="mx-auto flex max-w-xs flex-col gap-y-4">
-                        <dt className="text-base/7 text-gray-400">Assets under holding</dt>
-                        <dd className="order-first text-3xl font-semibold tracking-tight text-white sm:text-5xl">$119 trillion</dd>
-                    </div>
-                    <div className="mx-auto flex max-w-xs flex-col gap-y-4">
-                        <dt className="text-base/7 text-gray-400">New users annually</dt>
-                        <dd className="order-first text-3xl font-semibold tracking-tight text-white sm:text-5xl">46,000</dd>
-                    </div>
+        <div className="bg-gray-900 py-24 sm:py-10 border-2 border-gray-600 mx-8 rounded-md max-w-fit min-h-fit">
+            <div className="mx-auto max-w-8xl px-6 lg:px-8">
+                <p className="text-6xl text-amber-400 text-center"> {weather.name} </p>
+                <dl className="grid grid-cols-1 gap-x-8 gap-y-16 text-center lg:grid-cols-4">
+
+                    {weather && (
+                        <>
+                            <div className="mx-auto flex max-w-xs flex-col gap-y-4">
+                                <dt className="text-base/7 text-gray-400"> Temperatura: </dt>
+                                <dd className="order-first text-3xl font-semibold tracking-tight text-white sm:text-5xl"> {Math.round(weather.main.temp)}°C</dd>
+                            </div>
+                            <div className="mx-auto flex max-w-xs flex-col gap-y-4">
+                                <dt className="text-base/7 text-gray-400"> Humedad: </dt>
+                                <dd className="order-first text-3xl font-semibold tracking-tight text-white sm:text-5xl">{weather.main.humidity}%</dd>
+                            </div>
+                            <div className="mx-auto flex max-w-xs flex-col gap-y-4">
+                                <dt className="text-base/7 text-gray-400">Sensación:</dt>
+                                <dd className="order-first text-3xl font-semibold tracking-tight text-white sm:text-5xl">{Math.round(weather.main.feels_like)}°C</dd>
+                            </div>
+                            <div className="mx-auto flex max-w-xs flex-col gap-y-4">
+                                <dt className="text-base/7 text-gray-400">Viento:</dt>
+                                <dd className="order-first text-3xl font-semibold tracking-tight text-white sm:text-5xl">{weather.wind.speed} m/s</dd>
+                            </div>
+                        </>
+                    )}
                 </dl>
             </div>
         </div>

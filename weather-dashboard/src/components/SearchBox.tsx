@@ -7,7 +7,7 @@ interface SearchBoxProps {
 const SearchBox: React.FC<SearchBoxProps> = ({ prop_1 }) => {
 
     return (
-        <form className="mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl py-2">
+        <form className="mx-auto px-4 sm:px-6 lg:px-8 min-w-4xl py-2">
             <label className="block py-2 text-2xl leading-6 font-bold text-white">Search a place:</label>
             <div className="flex items-center rounded-md pl-1 outline-1 -outline-offset-1 outline-gray-600 has-[input:focus-within]:outline-2 has-[input:focus-within]:-outline-offset-2 has-[input:focus-within]:outline-indigo-500 bg-gray-800">
                 <MagnifyingGlassCircleIcon className="size-8 text-white h-full" />
