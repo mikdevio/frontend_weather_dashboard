@@ -5,6 +5,7 @@ import type { User, NavigationOption, UserOption } from '../types/Types'
 
 import user_df from '../assets/user_default.svg'
 import wd_logo from '../assets/wd_logo.svg'
+import { WeatherDataProvider } from "../context/WeatherContexto"
 
 
 const user: User = {
@@ -29,9 +30,11 @@ const userNavigation: UserOption[] = [
 
 export default function Main() {
   return (
-    <div className="min-h-full">
-      <NavBar navigationOps={navigation} userOps={userNavigation} user={user} logo={wd_logo} />
-      <Dashboard title="Dashboard" />
-    </div>
+    <WeatherDataProvider>
+      <div className="min-h-full">
+        <NavBar navigationOps={navigation} userOps={userNavigation} user={user} logo={wd_logo} />
+        <Dashboard title="Dashboard" />
+      </div>
+    </WeatherDataProvider>
   )
 }

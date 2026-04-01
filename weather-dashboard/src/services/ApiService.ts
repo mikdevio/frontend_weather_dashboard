@@ -57,6 +57,7 @@ class ApiService {
                     lon: data_location.lon
                 }
             });
+            console.log(res_weather.data);
             return res_weather.data;
         } catch (error) {
             console.error("Request error: ", error);
